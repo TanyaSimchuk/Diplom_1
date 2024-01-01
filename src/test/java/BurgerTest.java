@@ -12,7 +12,7 @@ import java.util.List;
 
 import static edu.praktikum.IngredientType.*;
 import static org.junit.Assert.*;
-import static org.mockito.Mockito.when;
+import static org.mockito.Mockito.*;
 
 @RunWith(MockitoJUnitRunner.class)
 public class BurgerTest {
@@ -27,11 +27,6 @@ public class BurgerTest {
         burger = new Burger();
         burger.addIngredient(mockIngredient);
         burger.setBuns(mockBun);
-    }
-
-    @Test
-    public void testAddIngredient() {
-        assertTrue(ingredients.add(mockIngredient));
     }
     @Test
     public void testRemoveIngredient() {
