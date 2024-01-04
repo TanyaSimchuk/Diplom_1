@@ -29,6 +29,14 @@ public class BurgerTest {
         burger.setBuns(mockBun);
     }
     @Test
+    public void testSetBuns() {
+        assertSame(mockBun, burger.bun);
+    }
+    @Test
+    public void testAddIngredient() {
+        assertTrue(burger.ingredients.contains(mockIngredient));
+    }
+    @Test
     public void testRemoveIngredient() {
         burger.removeIngredient(0);
         assertFalse(ingredients.contains(mockIngredient));
